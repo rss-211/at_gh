@@ -35,7 +35,7 @@ def get_contract_details(url):
         data[clean_name(rd[0].text_content().strip())]=rd[1].text_content().strip().replace("\n"," ").replace("\r","")
     if "Contract Award Price" in data.keys():
         data["Contract Award Price"]=float(re.sub("[^0-9.]","",data["Contract Award Price"]))
-    if "Currency:" in data.keys():
+    if "Currency" in data.keys():
         scraperwiki.sqlite.save(unique_keys=["url"],data=data)
 
 #contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url%p) for p in get_pages(url%00)]))
