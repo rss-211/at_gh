@@ -29,7 +29,7 @@ def clean_name(strn):
 def get_contract_details(url):
     data={"url":url}
     root=get_lxml(url)
-    data["name"]=root.cssselect("td.subhead font")[0].text_content()
+    #data["name"]=root.cssselect("td.subhead font")[0].text_content()
     for row in root.cssselect("tr.bodymain"):
         rd=row.cssselect("td")
         data[clean_name(rd[0].text_content().strip())]=rd[1].text_content().strip().replace("\n"," ").replace("\r","")
