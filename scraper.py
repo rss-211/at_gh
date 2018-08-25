@@ -46,5 +46,5 @@ contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url)]))
 #    except:
 #        pass
 
-get_contract_details("http://www.ppaghana.org/contractdetail.asp?Con_ID=3110")
+get_contract_details(url)
 
