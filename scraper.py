@@ -3,7 +3,7 @@ import lxml.html
 import re
 
 #url="http://www.ppbghana.org/contracts_results.asp?Ministry=%%25&Region=%%25&Agency=%%25&TNDType=%%25&ppb_date=356&Submit=Search&offset=%d"
-url="http://www.ppaghana.org/contractresults.asp?Ministry=%25&Agency=%25&ppb_date=10000&Submit=Search&offset=%d"
+url="http://www.ppaghana.org/contractresults.asp?Ministry=%25&Agency=%25&ppb_date=10000&Submit=Search&offset="
 base="http://www.ppaghana.org/"
 
 def get_lxml(url):
