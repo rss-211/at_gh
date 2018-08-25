@@ -40,11 +40,11 @@ def get_contract_details(url):
 
 #contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url%p) for p in get_pages(url%00)]))
 contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url)]))
-for cu in contract_urls:
-    try:
-        get_contract_details(cu)
-    except:
-        pass
+#for cu in contract_urls:
+#    try:
+#        get_contract_details(cu)
+#    except:
+#        pass
 
-#get_contract_details("http://www.ppbghana.org/contracts.asp?Con_ID=5710")
+get_contract_details("http://www.ppaghana.org/contractdetail.asp?Con_ID=3110")
 
