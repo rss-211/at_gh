@@ -3,7 +3,7 @@ import lxml.html
 import re
 
 #url="http://www.ppbghana.org/contracts_results.asp?Ministry=%%25&Region=%%25&Agency=%%25&TNDType=%%25&ppb_date=356&Submit=Search&offset=%d"
-url="http://www.ppaghana.org/contractresults.asp?Ministry=%25&Agency=%25&ppb_date=10000&Submit=Search&offset="
+url="http://www.ppaghana.org/contractresults.asp?Ministry=%25&Agency=%25&ppb_date=10000&Submit=Search&offset=%d"
 base="http://www.ppaghana.org/"
 
 def get_lxml(url):
@@ -38,7 +38,7 @@ def get_contract_details(url):
     if "Tender Type" in data.keys():
         scraperwiki.sqlite.save(unique_keys=["url"],data=data)
 
-contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url%p) for p in get_pages(url)]))
+contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url%p) for p in get_pages(url%00)]))
 
 for cu in contract_urls:
     try:
