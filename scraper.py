@@ -39,7 +39,7 @@ def get_contract_details(url):
         scraperwiki.sqlite.save(unique_keys=["url"],data=data)
 
 #contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url%p) for p in get_pages(url%00)]))
-contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url%(str(p))) for p in range(1,10)]))
+contract_urls=set(reduce(lambda x,y: x+y,[get_contract_urls(url%(str(10)))]))
 for cu in contract_urls:
     try:
         get_contract_details(cu)
